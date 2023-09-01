@@ -168,6 +168,7 @@ body {
   width: 100%;
   height: 100vh;
   top: 0;
+  display: flex;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
   transform: scale(1);
@@ -196,15 +197,16 @@ body {
   transform: translate(-50%, -50%);
 }
 .btn-close {
-  position: relative;
-  left: 495px;
-  padding: 4px 8px 4px 8px;
-  margin-top: 8px;
-  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  background: var(--main-color);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-  cursor: pointer;
+  top: 8px;
+  right: 8px;
+  padding: 0;
 }
 .section {
   padding: 94px 0;
@@ -448,17 +450,21 @@ body {
   letter-spacing: 0.03em;
 }
 .list-social-footer {
+  margin-top: 20px;
   list-style-type: none;
   display: flex;
   gap: 10px;
-  justify-content: center;
-  fill: var(--main-color);
   padding: 0;
 }
 .icon-social-footer {
-  padding: 9px 8px 6px 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--main-color);
 }
 .icon-social-footer:hover,
 .icon-social-footer:focus,
@@ -565,7 +571,7 @@ body {
 .link-img {
   text-decoration: none;
 }
-.img-container:hover > .text-img {
+.link-img:hover .text-img {
   transform: translatey(0);
 }
 .list-services-portfolio:hover,
